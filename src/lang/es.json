@@ -9,5 +9,10 @@
     "mainAboutMeTittle": "Sobre mi",
     "mainAboutMe": "Mi nombre es Cristian Ludueña, arranqué programación desde los 18 años, a partir de ahí empecé a interesarme por las nuevas tecnologías. Estudié 3 años para formarme como técnico en desarrollo de Software, y a partir de ahí fuí autodidacta en aprender nuevos rubros como React y Node js. Soy una persona responsable y me gustan los desafíos, en particular, estoy dispuesto a formar parte de cualquier organización/empresa con tal de ganar experiencia y brindar mis conocimientos.",
     "sectionSkills": "Habilidades",
-    "sectionOtrasMas": "Otras habilidades mias"
+    "sectionOtrasMas": "Otras habilidades mias",
+    "experience": "experiencias",
+    "experienceSubtitle": "Descubre algunos proyectos que he realizado!",
+    "contact": "Podes contactarme en:",
+    "hechoReact" : "hecho con ❤ en",
+    "creator": "Creador Cristian Ludueña"
 }

@@ -567,6 +567,10 @@ ul.show{
     transition: all 0.5s ease-out;
 }
 
+.botones{
+    display: flex;
+}
+
 .portafolio-text p{
     text-align: justify;
     margin-bottom: 10px;

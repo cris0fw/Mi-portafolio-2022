@@ -8,10 +8,11 @@ import {AiFillLinkedin} from 'react-icons/ai'
 import {AiFillInstagram} from 'react-icons/ai'
 import {AiFillFacebook} from "react-icons/ai"
 import ParteOscura from './ParteOscura'
+import {FormattedMessage} from 'react-intl'
 
 const Contacto = () => {
     return <footer className='footer' id='contact'>
-        <h1>Podes contactarme en:</h1>
+        <h1><FormattedMessage id='contact' defaultMessage="You can contact me at:" /></h1>
 
         <div className='contactos'>
             <a href="https://github.com/cris0fw" target="_blank" rel="noreferrer"> <BsGithub color='#ffff' fontSize="50"/> </a>
