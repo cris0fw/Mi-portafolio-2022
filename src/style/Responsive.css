@@ -361,6 +361,113 @@
         font-weight:bold;
         padding: 10px 0;
     }
+}
 
+@media screen and (max-width: 280px) {
+    /* SESSION HEADER */
+    .header{
+        height: 85vh;
+        min-height: 85vh;
+    }
+      
+    .contenedor-principal{
+        width: 90%;
+        min-width: 270px;
+        height: 280px;
+        padding: 10px 30px;
+        margin-top: 170px;
+    }
 
+    .contenedor-principal h1{
+        font-size: 2rem;
+    }
+
+    .contenedor-principal a{
+        width: 150px;
+        height: 48px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin-top: 30px;
+        background-color: #194EA5;
+        font-size: 1rem;
+    }
+
+    /* SESSION DE MENU */
+    .menu .logo{
+        width: 45px;
+        height: 45px;
+    }
+
+    .items .imagenEs img{
+        width: 40px;
+        height: 20px;
+        margin-top: 0;
+    }
+    .items .imagenEn img{
+        width: 40px;
+        height: 20px;
+        margin-left: 15px;
+        margin-bottom: 80px;
+        background-color: red;
+    }
+
+    .items li{
+        padding: 10px 40px;
+        background-color: green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* SESSION SOBRE MI */
+    .box{
+        width: 240px;
+        height: 360px;
+    }
+
+    .main-imagen-texto a{
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+        text-align: center;
+        padding: 8px 10px;
+        margin-top: 20px;
+    }
+
+    .habilidades .texto h1{
+        font-size: 2.3rem;
+    }
+
+    .otrasHabilidades h2{
+        font-size: 2.1rem;
+    }
+
+    .experiencias h1{
+        font-size: 2.3rem;
+    }
+
+    .portafolio-item{
+        width: 430px;
+        height: 180px;
+    }
+
+    .footer h1{
+        font-size: 1.5rem;
+    }
+
+    .contactos{
+        width: 100%;
+    }
+
+    .oscura{
+        display: flex;
+        flex-direction: column;
+      }
+
+    .oscura p{
+        font-size: 15px;
+    }
 }
