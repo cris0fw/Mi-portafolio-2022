@@ -1,0 +1,659 @@
+/*LETRAS*/
+@import url('https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Archivo:wght@300;400;600&family=Asap+Condensed:wght@500;600&family=Boogaloo&family=Bubblegum+Sans&family=Carter+One&family=Chela+One&family=Chewy&family=Chicle&family=Courgette&family=Galada&family=Roboto&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* SECCION DEL HEADER */
+/* Contenedor principal el header */
+.header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    position: relative;
+    background-image: url(/src/img/imagen1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transition: all .1s ease-in-out;
+    animation: banner 28s infinite linear;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Efecto oscuro del header */
+.header::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(2, 2, 2, .4);
+}
+
+/* Contiene un boton y a la letra */
+.contenedor-principal{
+    width: 90%;
+    max-width: 800px;
+    height: 450px;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background-color: #f4f4f410;
+    backdrop-filter: blur(0.4rem);
+    -webkit-backdrop-filter: blur(0.4rem);
+}
+
+/* Este es mi boton */
+.contenedor-principal a{
+    width: 250px;
+    height: 58px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 50px;
+    background-color: #194EA5;
+    font-size: 1rem;
+    overflow: hidden;
+    transition: .3s;
+    font-family: 'Carter One', cursive;
+    color: #fff;
+}
+
+.contenedor-principal a span{
+    position: absolute;
+    width: 100%;
+    height: 170px;
+    border-radius: 50%;
+    background-color: rgba(93, 108, 118, .7);
+    top: -50%;
+    left: -100%;
+    transition: .3s;
+}
+
+.contenedor-principal a:hover span{
+    left: -10%;
+}
+
+.contenedor-principal a:hover{
+    color: white;
+    background-color: rgb(12, 35, 50);
+}
+
+/*Contenedor de la letra*/
+.contenedor-principal h1{
+    font-size: 3.8rem;
+    text-align: center;
+    color: #1E1E1E;
+    font-family: 'Carter One', cursive;
+    font-weight: 600;
+    background-clip: text;
+    -webkit-text-stroke: 1.5px rgba(240, 240, 240, .8);
+}
+
+/* Efecto de mis imagenes del header */
+@keyframes banner{
+    0% {
+        background-image: url(/src/img/imagen1.jpg);
+    }
+    25%{
+        background-image: url(/src/img/imagen1.jpg);
+    }
+    26%{
+        background-image: url(/src/img/imagen2.jpg);
+    }
+    50%{
+        background-image: url(/src/img/imagen2.jpg);
+    }
+    51%{
+        background-image: url(/src/img/imagen3.jpg);
+    }
+    75%{
+        background-image: url(/src/img/imagen3.jpg);
+    }
+    76%{
+        background-image: url(/src/img/imagen4.jpg);
+    }
+    100%{
+        background-image: url(/src/img/imagen4.jpg);
+    }
+}
+
+/* Mi logo que esta en el menu */
+.menu .logo{
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+
+/* Mi menu  */
+.menu{
+    background-color: rgba(23, 23, 37, .5);
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, .6);
+    z-index: 2;
+}
+
+/* Mi ul que dentro tienen los li y a */
+.items{
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+.items li{
+    border-radius: 3px;
+}
+
+.link{
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 18px;
+    display: block;
+    color: white;
+    font-family: 'Amaranth', sans-serif;
+    transition: all 5s ease-in;
+    position: relative;
+}
+
+.link::after{
+	content: "";
+	position: absolute;
+	background-color: #fff;
+	height: 3px;
+	width: 0;
+	left: 0;
+	bottom: -10px;
+	transition: 0.3s;
+}
+
+.link:hover::after{
+	width: 100%;
+}
+
+/* Mi menu hamburguesa */
+.btn_menu{
+    margin-right: 30px;
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Efecto esconder y mostrar el menu */
+ul.show{
+    left: 0;
+}
+
+.items .imagenEs img{
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.items .imagenEn img{
+    width: 40px;
+    height: 20px;
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.items .imagenEn{
+    margin-right: 30px;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+.items .imagenEs{
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+
+/* SECCION DEL MAIN SOBRE MI */
+.main{
+    width: 100%;
+    min-height: 800px;
+    overflow: hidden;
+    background-color: #1E1E1E;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    align-items: center;
+}
+
+.main h1{
+    text-align: center;
+    color: #194EA5;
+    font-size: 3.7rem;
+    font-family: 'Courgette', cursive;
+    font-weight:bold;
+    padding: 10px 0;
+    margin-top: 50px;
+    border-bottom: 5px solid #194EA5;
+}
+
+.main-imagen-texto {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.box{
+    display: inline;
+    position: relative;
+    width: 370px;
+    height: 470px;
+    background-color: #1E1E1E;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.box::before{
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 140%;
+    background: linear-gradient(to right, #194EA5, #194EA5);
+    animation: rotate 4s linear infinite;
+}
+
+.box::after{
+    content: "";
+    position: absolute;
+    background: #0e1538;
+    background-image: url("../img/miFoto.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    inset: 5px;
+    border-radius: 16px;
+}
+
+@keyframes rotate{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+}
+
+.parrafos{
+    display: inline;
+    width: 50%;
+    border: 6px double #194EA5;
+    padding: 25px 17px;
+}
+
+.main-imagen-texto p{
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Amaranth', sans-serif;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.main-imagen-texto a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px 15px;
+    margin-top: 20px;
+    background-color: #194EA5;
+    font-family: 'Carter One', cursive;
+}
+
+.main-imagen-texto a:hover{
+    color: #194EA5 !important;
+    background-color: white;
+    border: 1px solid #194EA5;
+}
+
+.habilidades{
+    width: 100%;
+    min-height: 900px;
+    background-color: #2C4775;
+  
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items:center;
+}
+
+.habilidades .texto h1{
+    text-align: center;
+    color: #CECECE;
+    font-size: 3.7rem;
+    font-family: 'Courgette', cursive;
+    font-weight:bold;
+    margin-top: 50px;
+    padding: 10px 0;
+    border-bottom: 5px solid #CECECE;
+}
+
+.contenedorHabilidades{
+    width: 100%;
+    max-width: 900px;
+    min-height: auto;
+  
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 50px;
+}
+
+.contElements{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 1s ease-out;
+    box-shadow: 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);		
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.contElements p::before{
+    color: black;
+}
+
+.contElements:hover{
+    background-color: rgba(32, 49, 78, .9) !important;
+    transform: scale(1.02);
+}
+
+.contElements p{
+    font-family: 'Carter One', cursive;
+    color: #CECECE;
+    padding: 10px 0;
+    font-size: 16px;
+    margin-top: 9px;
+}
+
+/* SECCION DE MAS INFORMACION */
+.otrasHabilidades{
+    width: 100%;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    background-color: #1E1E1E;
+}
+
+.otrasHabilidades h2{
+    text-align: center;
+    color: #194EA5;
+    font-size: 3.2rem;
+    font-family: 'Courgette', cursive;
+    font-weight:bold;
+    margin-top: 50px;
+    padding: 10px 0;
+    border-bottom: 5px solid #194EA5;
+}
+
+.slider {
+    width: 75vw;
+    height: auto;
+    margin: auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    -webkit-animation: scroll 40s linear infinite;
+    width: calc(200px * 14);
+}
+
+.slider .slide {
+    width: 200px;
+    margin-left: 10px;
+}
+
+.slider .slide img {
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(calc(-200px * 7));
+        transform: translateX(calc(-200px * 7));
+    }
+}
+
+/* SESSION DE MIS EXPERIENCIAS */
+.experiencias{
+    width: 100%;
+    min-height: 870px;
+  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  
+    background-color: #2C4775;
+}
+
+.experiencias h1{
+    text-align: center;
+    color: #CECECE;
+    font-size: 3.7rem;
+    font-family: 'Courgette', cursive;
+    font-weight:bold;
+    margin-top: 40px;
+    padding: 10px 0;
+    border-bottom: 5px solid #CECECE;
+}
+
+.descubrir{
+    margin: 0 auto;
+}
+
+.descubrir p{
+    font-size: 20px;
+    padding: 8px 10px;
+    color: #CECECE;
+    margin-top: 13px;
+    text-align: center;
+}
+
+.grid-proyectos{
+    width: 90%;
+    max-width: 1370px;
+    
+    margin: auto;
+    padding: 0 0 50px 0;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 440px));
+  
+    justify-content: space-evenly ;
+}
+
+.portafolio-container .portafolio-item img{
+    width: 100%;
+    height: 100%;
+}
+
+.grid-proyectos h2{
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 0px 20px;
+    font-family: 'Carter One', cursive;
+}
+
+.portafolio-container{
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: center;
+    align-items: center;
+}
+
+.portafolio-item{
+    width: 430px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.portafolio-img{
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+ }
+
+ .portafolio-text{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+     padding: 20px;
+  
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+  
+    -webkit-transform: translateY(100%);
+  
+    -ms-transform: translateY(100%);
+  
+    transform: translateY(100%);
+  
+    -webkit-transition: all 0.5s ease-out;
+  
+    transition: all 0.5s ease-out;
+}
+
+.portafolio-text p{
+    text-align: justify;
+    margin-bottom: 10px;
+  }
+
+.portafolio-item:hover .portafolio-text{
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+}
+
+.portafolio-item:hover .portafolio-img{
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+.portafolio-text a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px ;
+    height: 40px;
+    background-color: #2C4775;
+    border-radius: 10px;
+    padding: 9px 10px;
+    text-decoration: none;
+    color: #ffff;
+    font-family: 'Chewy', cursive;
+    margin-right: 20px;
+}
+
+.portafolio-text a span{
+    margin-left: 10px;
+  }
+
+  /* SECCION DE CONTACTO */
+  .footer{
+    width: 100%;
+    height: 260px;
+    background-color: #1E1E1E;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .footer h1{
+    text-align: center;
+    color: #CECECE;
+    font-size: 2.5rem;
+    font-family: 'Courgette', cursive;
+    font-weight:bold;
+    padding: 10px 0;
+  }
+  
+  .contactos{
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 8px 10px;
+  }
+  
+  .contactos a{
+    margin-left: 10px;
+  }
+  
+  /* SECCION DE PARTE OSCURA */
+  .oscura{
+    width: 100%;
+    height: 50px;
+    background-color: #141414;
+  
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .oscura p{
+    color: #0A66C2;
+    font-size: 20px;
+    font-family: 'Chewy', cursive;
+  }
+  
