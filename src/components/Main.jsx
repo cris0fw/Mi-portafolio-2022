@@ -18,7 +18,7 @@ const Main = () => {
             />
           </p>
 
-          <a href={require("../docs/curriculom.pdf")} className="icono" download><BiDownload color="white" fontSize="30"/> Descargar CV</a>
+          <a href={require("../docs/Curriculom.pdf")} className="icono" download><BiDownload color="white" fontSize="30"/> Descargar CV</a>
         </div>
       </div>
     </main>
